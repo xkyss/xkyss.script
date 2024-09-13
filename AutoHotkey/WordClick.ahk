@@ -29,9 +29,11 @@
 ; }
 
 
-^m::
+F8::
 {
-
+    Send "{BackSpace}"
+    Send "{BackSpace}"
+    Send "{BackSpace}"
 }
 
 
