@@ -12,18 +12,19 @@
 
 
 ; ; 选中一个目录,调整样式
-; ^m::
+; F8::
 ; {
 ;     ; 获取鼠标当前位置
 ;     MouseGetPos &xpos, &ypos
-;
-;     ; 点击
-;     ; @标题2
+
+;     ; 点击, 用Window Spy 找Screen坐标
 ;     ; Click "1141 123"
-;
-;     ; @标题3
-;     Click "1215 120"
-;
+;     ; Click "1215 120"
+;     ; 样式3
+;     Click "1000 110"
+;     ; 样式5
+;     ; Click "1133 121"
+
 ;     ; 移回鼠标到原位置
 ;     MouseMove xpos, ypos
 ; }
@@ -31,9 +32,23 @@
 
 F8::
 {
-    Send "{BackSpace}"
-    Send "{BackSpace}"
-    Send "{BackSpace}"
+    ; 选中整个表
+    ; 获取鼠标当前位置
+    MouseGetPos &xpos, &ypos
+
+    ; 表内容
+    Click "1500 125"
+
+
+    ; 点击选中表头
+    Click xpos, ypos + 50
+
+    Sleep(300)
+    ; 表头
+    Click "1620 290"
+
+    ; 移回鼠标到原位置
+    MouseMove xpos, ypos + 50
 }
 
 
