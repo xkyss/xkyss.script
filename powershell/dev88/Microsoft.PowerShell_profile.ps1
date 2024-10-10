@@ -76,5 +76,5 @@ Function Proxy_c {
 }
 
 Function svn_m {
-  svnserve.exe -d -r E:\Svn\
+  svnserve.exe -d -r E:\
 }
