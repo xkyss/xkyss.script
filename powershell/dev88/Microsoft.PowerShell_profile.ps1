@@ -37,8 +37,15 @@ Function dev_mlcache_web {
 Function ssh_144 {
   ssh appstore@192.168.1.144
 }
+Function ssh_92 {
+  ssh djhc@192.168.1.92
+}
 Function ssh_47 {
-  ssh appcenter@192.168.1.47
+  # ssh appcenter@192.168.1.47
+  ssh djhc@192.168.1.47
+}
+Function ssh_cn {
+  ssh xkyii@xkyii.cn
 }
 
 #jdk
