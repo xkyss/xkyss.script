@@ -10,45 +10,45 @@
 ;     Send "^{v}"
 ; }
 
-; 选中一个目录,调整样式
-F7::
-{
-    ; 获取鼠标当前位置
-    MouseGetPos &xpos, &ypos
+; ; 选中一个目录,调整样式
+; F7::
+; {
+;     ; 获取鼠标当前位置
+;     MouseGetPos &xpos, &ypos
 
-    ; 拖拽选中一段
-    MouseClickDrag "Left", xpos, ypos, xpos + 30, ypos, 1
+;     ; 拖拽选中一段
+;     MouseClickDrag "Left", xpos, ypos, xpos + 30, ypos, 1
 
-    ; 点击, 用Window Spy 找Screen坐标
-    ; Click "1141 123"
-    ; Click "1215 120"
-    ; 样式3
-    Click "1389 100"
-    ; 样式5
-    ; Click "1133 121"
+;     ; 点击, 用Window Spy 找Screen坐标
+;     ; Click "1141 123"
+;     ; Click "1215 120"
+;     ; 样式3
+;     Click "1389 100"
+;     ; 样式5
+;     ; Click "1133 121"
 
-    ; 移回鼠标到原位置
-    MouseMove xpos, ypos
-}
+;     ; 移回鼠标到原位置
+;     MouseMove xpos, ypos
+; }
 
-; 选中一个目录,调整样式
-F8::
-{
-    Send "{Del 2}"
-    ; 获取鼠标当前位置
-    MouseGetPos &xpos, &ypos
+; ; 选中一个目录,调整样式
+; F8::
+; {
+;     Send "{Del 2}"
+;     ; 获取鼠标当前位置
+;     MouseGetPos &xpos, &ypos
 
-    ; 点击, 用Window Spy 找Screen坐标
-    ; Click "1141 123"
-    ; Click "1215 120"
-    ; 样式3
-    Click "1448 100"
-    ; 样式5
-    ; Click "1133 121"
+;     ; 点击, 用Window Spy 找Screen坐标
+;     ; Click "1141 123"
+;     ; Click "1215 120"
+;     ; 样式3
+;     Click "1448 100"
+;     ; 样式5
+;     ; Click "1133 121"
 
-    ; 移回鼠标到原位置
-    MouseMove xpos, ypos
-}
+;     ; 移回鼠标到原位置
+;     MouseMove xpos, ypos
+; }
 
 
 ; F8::
@@ -94,5 +94,30 @@ F8::
 ;     Click 100
 ; }
 
+;F8::
+;{
+;    Send "-"
+;    Send "{Down}"
+;}
 
+
+ ; 选中一个目录,调整样式
+ F8::
+ {
+    ; 获取鼠标当前位置
+    MouseGetPos &xpos, &ypos
+
+    ; 点击, 用Window Spy 找Screen坐标
+    Click "710 115"
+    Sleep 500
+    Click "750 175"
+
+    ;Sleep 100
+    ;Click "710 115"
+    ;Sleep 100
+    ;Click "750 200"
+
+     ; 移回鼠标到原位置
+     ;MouseMove xpos, ypos
+ }
 return
