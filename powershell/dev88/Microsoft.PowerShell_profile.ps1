@@ -82,6 +82,10 @@ Function Proxy_c {
   git config --global https.proxy https://127.0.0.1:7890
 }
 
-Function svn_m {
-  svnserve.exe -d -r E:\Repo\
+# svn
+Function svn_addcontext {
+  Start-Process regedit.exe -ArgumentList "/s", "D:\Scoop\apps\tortoisesvn\current\tortoisesvn-install.reg" -Wait
+}
+Function svn_delcontext {
+  Start-Process regedit.exe -ArgumentList "/s", "D:\Scoop\apps\tortoisesvn\current\tortoisesvn-uninstall.reg" -Wait
 }
